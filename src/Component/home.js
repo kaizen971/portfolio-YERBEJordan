@@ -100,13 +100,12 @@ export default function Home() {
 
 
 
-
   return (
     <div class="no-bottom no-top" id="content">
 
       <div id="top"></div>
 
-      <section id="section-hero" class="vertical-center custom-1" aria-label="section" style={{ backgroundImage: disableBackgroundColorHome ? "none" : image ? `url(${process.env.PUBLIC_URL}${image})` : `url(${process.env.PUBLIC_URL}/images/background/green-01.webp)`, backgroundColor: backgroundColorUniqueHome, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+      <section id="section-hero" class="vertical-center custom-1" aria-label="section" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/background/green-01.webp)` ,  backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
         <WelcomeModal />
         <div class="container">
           {!hideEdit && <ModalEditBackground disableBackgroundColorType={"disableBackgroundColorHome"} showModal={showModal} setShowModal={setShowModal} handleFileUpload={(event) => handleFileUpload(event, 0)} listItems={listItems} setEnableBackgroundColorHome={dispatchEnableBackgroundColorHome} style={{ marginTop: 10, marginBottom: 10, backgroundColor: "#10afa0", position: "absolute", top: 100, left: 100, backgroundColor: color }} setImage={dispatchBackground} setImageBackgroundColorUnique={dispatchBackgroundColorUniqueHome} label={isFrench ? "Changer le fond d'image" : "Change background image"} />}

@@ -9,7 +9,7 @@ function NavBar() {
     const [edit, setEdit] = useState(false);
     const [facebook, setFacebook] = useState("https://www.facebook.com/jordan.yerbe.3");
     const [twitter, setTwitter] = useState("https://twitter.com/JordanYerbe");
-    const [linkedin, setLinkedin] = useState("https://www.linkedin.com/in/ -yerbe-5a1b3b1b3/");
+    const [linkedin, setLinkedin] = useState("www.linkedin.com/in/jordan-yerbe");
     const [instagram, setInstagram] = useState("https://www.instagram.com/jordan_yerbe/");
     const [openNavBar, setOpenNavBar] = useState(false);
     const color = useSelector((state) => state.counter.color);
