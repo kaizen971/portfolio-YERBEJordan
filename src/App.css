@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.circle-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #10afa0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* valeur de z-index élevée pour placer le modal en premier plan */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.progress-bar-container {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Modifier la largeur de la barre de progression en fonction de la valeur de l'attribut "data-value" */
+.progress-bar[data-value="100%"] {
+  width: 100%;
+}
+
+.progress-bar[data-value="90%"] {
+  width: 90%;
+}
+
+.progress-bar[data-value="80%"] {
+  width: 80%;
+}
+
+/* Ajouter d'autres règles pour chaque pourcentage possible */
+
+/* Style pour la barre de progression lorsqu'elle est complétée */
+.progress-bar.complete {
+  background-color: #28a745;
+}
+
+.gallery img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Définir la hauteur souhaitée */
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Positionne la vidéo derrière le contenu */
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Positionne le contenu au-dessus de la vidéo */
+  color: white; /* Couleur du texte */
+  text-align: center;
+  padding: 20px;
+}
