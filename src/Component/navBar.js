@@ -106,7 +106,7 @@ function NavBar() {
                                     </div>}
                                 </div>
                                 <div class="social-icons">
-                                    <a href={`${linkedin}`}><i class="fa fa-linkedin fa-lg" style={{ backgroundColor: `${color}` }}></i></a>
+                                    <a href={`${linkedin}`} target="_blank"><i class="fa fa-linkedin fa-lg" style={{ backgroundColor: `${color}` }}></i></a>
                                 </div>
                                 <div style={{ display: "flex", position: "relative", flexDirection: "column", position: "absolute" }}>
                                     {edit && !hideEdit && <input type="text" style={{ width: 200, zIndex: 1, }} onChange={(text) => setFacebook(text.target.value)} placeholder={isFrench ? "Lien Facebook" : "Facebook link"} />}
