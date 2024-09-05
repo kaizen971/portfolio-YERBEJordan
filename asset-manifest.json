@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio-YERBEJordan/static/css/main.739fb233.css",
-    "main.js": "/portfolio-YERBEJordan/static/js/main.187e9bea.js",
+    "main.js": "/portfolio-YERBEJordan/static/js/main.3b42ea2c.js",
     "static/js/651.793f131a.chunk.js": "/portfolio-YERBEJordan/static/js/651.793f131a.chunk.js",
     "static/media/green-01.mp4": "/portfolio-YERBEJordan/static/media/green-01.280c43dcf9cf07dee1ea.mp4",
     "static/media/logo.svg": "/portfolio-YERBEJordan/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/portfolio-YERBEJordan/index.html",
     "main.739fb233.css.map": "/portfolio-YERBEJordan/static/css/main.739fb233.css.map",
-    "main.187e9bea.js.map": "/portfolio-YERBEJordan/static/js/main.187e9bea.js.map",
+    "main.3b42ea2c.js.map": "/portfolio-YERBEJordan/static/js/main.3b42ea2c.js.map",
     "651.793f131a.chunk.js.map": "/portfolio-YERBEJordan/static/js/651.793f131a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.739fb233.css",
-    "static/js/main.187e9bea.js"
+    "static/js/main.3b42ea2c.js"
   ]
 }
