@@ -8,11 +8,11 @@ const WelcomeModal = () => {
   const isFrench = useSelector((state) => state.counter.isFrench);
 
   useEffect(() => {
-    const visited = localStorage.getItem('visited');
-    if (!visited) {
-      setOpen(true);
-      localStorage.setItem('visited', 'true');
-    }
+    // const visited = localStorage.getItem('visited');
+    // if (!visited) {
+    //   setOpen(true);
+    //   localStorage.setItem('visited', 'true');
+    // }
   }, []);
 
   const handleClose = () => {
