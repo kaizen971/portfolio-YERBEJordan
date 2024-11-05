@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import ModalEditBackground from './modalEditBackground';
 import ColorChangingModal from './modalColorChange'
@@ -105,7 +104,7 @@ export default function Home() {
 
       <div id="top"></div>
 
-      <section id="section-hero" class="vertical-center custom-1" aria-label="section" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/background/green-01.webp)` ,  backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+      <section id="section-hero" class="vertical-center custom-1" aria-label="section" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/background/background-sable.jpg)` ,  backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
         <WelcomeModal />
         <div class="container">
           {!hideEdit && <ModalEditBackground disableBackgroundColorType={"disableBackgroundColorHome"} showModal={showModal} setShowModal={setShowModal} handleFileUpload={(event) => handleFileUpload(event, 0)} listItems={listItems} setEnableBackgroundColorHome={dispatchEnableBackgroundColorHome} style={{ marginTop: 10, marginBottom: 10, backgroundColor: "#10afa0", position: "absolute", top: 100, left: 100, backgroundColor: color }} setImage={dispatchBackground} setImageBackgroundColorUnique={dispatchBackgroundColorUniqueHome} label={isFrench ? "Changer le fond d'image" : "Change background image"} />}
@@ -122,8 +121,8 @@ export default function Home() {
                 </div>}
                 {edit && !hideEdit && <input type="text" style={{ width: 500 }} onChange={(text) => dispatchTitle(text.target.value)} defaultValue={title} placeholder="Title" />}
               </div>
-              <h1 class="wow fadeInUp" data-wow-delay=".5s" style={{ color: titleHomeTextcolor }}>{title}</h1>
-              <p class="lead wow fadeInUp" data-wow-delay=".75s" style={{ color: subTitleHomeTextcolor }}>{description}</p>
+              <h1 class="wow fadeInUp" data-wow-delay=".5s" style={{ color: "#1D1614", textShadow: "1px 1px 2px rgba(0,0,0,0.2)", fontWeight: 600 }}>{title}</h1>
+              <p class="lead wow fadeInUp" data-wow-delay=".75s" style={{ color: "#2D2D2D", textShadow: "1px 1px 2px rgba(0,0,0,0.1)", fontWeight: 500 }}>{description}</p>
               <div style={{ display: "flex", position: "relative" }}>
                 {!edit && !hideEdit && <div style={{ position: "absolute", top: -10, right: 10 }}>
                   <a href={"#modif"} class="circle-icon" style={{ backgroundColor: color }} onClick={() => setEdit(true)}><i class="fa fa-pencil fa-lg" style={{ color: "black" }}></i></a>
@@ -134,7 +133,7 @@ export default function Home() {
                 {edit && !hideEdit && <textarea type="text-area" style={{ width: 500 }} onChange={(text) => dispatchDescription(text.target.value)} defaultValue={description} placeholder="Description" rows="5" cols="33" />}
               </div>
               <div class="spacer-20"></div>
-              <a class="btn-custom scroll-to wow fadeInUp" data-wow-delay="1s" style={{ backgroundColor: color }} href="#section-about">{isFrench ? "En savoir plus" : "Learn more"}</a>
+              <a class="btn-custom scroll-to wow fadeInUp" data-wow-delay="1s" style={{ backgroundColor: "#7C98AB", boxShadow: "2px 2px 4px rgba(0,0,0,0.15)" }} href="#section-about">{isFrench ? "En savoir plus" : "Learn more"}</a>
             </div>
           </div>
         </div>

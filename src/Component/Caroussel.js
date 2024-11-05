@@ -1,4 +1,3 @@
-import OwlCarousel from 'react-owl-carousel';
 import {
   Card,
   CardContent,
@@ -16,7 +15,7 @@ import {
   CardActions,
   Box
  } from "@mui/material";
-
+import OwlCarousel from 'react-owl-carousel';
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import CommentModal from "./modalAddComment";

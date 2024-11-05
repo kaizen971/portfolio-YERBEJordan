@@ -7,6 +7,7 @@ import Services from './Component/Services';
 import CommentScreen from './Component/commentScreen';
 import PortfolioScreen from './Component/portfolioScreen';
 import ContactUs from './Component/contactUs';
+import Fauteuil from './components/Fauteuil';
 
 function App() {
    
@@ -15,10 +16,10 @@ function App() {
 
         <NavBar />
       <Home/> 
-      <About/>
-      <Services/>
+      <Fauteuil/>
       <PortfolioScreen/>
-        <ContactUs/>
+      <About/>
+      <ContactUs/>
 
 
                 </div>

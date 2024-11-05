@@ -88,11 +88,10 @@ body {
 	font-family:"Nunito", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	color: #515c6a;
 	line-height: 1.7em;
 	padding: 0;
 	display: none;
-	background:#e4e7e9;
+	background:#f8f9fa;
 }
 body.boxed {
 	margin: 30px;
@@ -752,7 +751,7 @@ header.header-mobile #menu-btn {
 
 #content {
 	width: 100%;
-	background: #fff;
+	background: #f8f9fa;
 	padding: 90px 0 90px 0;
 	z-index: 100;
 }
@@ -760,7 +759,7 @@ header.header-mobile #menu-btn {
 	background: #ffffff;
 }
 #content {
-	background: #ffffff;
+	background: #f8f9fa;
 }
 
 /* ================================================== */
@@ -6811,7 +6810,6 @@ span.overlay {
 	text-align: center;
 	display: block;
 	width: 100px;
-	background: rgba(var(--primary-color-rgb), .8);
 	position: absolute;
 	opacity: .75;
 	z-index:500;

@@ -69,12 +69,7 @@ function NavBar() {
                             </div> */}
                       <div style={mobileScreen ?  {position:"absolute", top:10, top:10,display:"flex", flexDirection:"row", justifyContent:"space-between", width:100,margin:10} : {display:"flex", flexDirection:"row", justifyContent:"space-between", width:100,margin:10}}>
                             <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center",marginRight:10}}>
-                                <a href={'#'} onClick={() => changeLanguage(true)}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" style={{width:50, height:30}}/></a>
-                                <p style={{fontSize:10}}>Français</p>
-                            </div>
-                            <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                            <a href={'#'} onClick={() => changeLanguage(false)}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/2560px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png" style={{width:50, height:30}}/></a>
-                                <p style={{fontSize:10}}>English</p>
+           
                         </div>
 
                         </div> 
@@ -82,11 +77,12 @@ function NavBar() {
                                 <ul id="mainmenu" class="scrollnav">
                                     <li><a href="#section-hero" >{isFrench ? "Acceuil" : "Home"}</a></li>
                                     <li></li>
-                                    <li><a href="#section-about">{isFrench ? "A propos" : "About"}</a></li>
                                     <li></li>
-                                    <li><a href="#section-services">{isFrench ? "Services" : "Services"}</a></li>
+                                    <li><a href="#section-fauteuil">{isFrench ? "Nos Fauteuils" : "Fauteuils"}</a></li>
                                     <li></li>
                                     <li><a href="#section-portfolio">{isFrench ? "Portfolio" : "Portfolio"}</a></li>
+                                    <li></li>
+                                    <li><a href="#section-about">{isFrench ? "A propos" : "About"}</a></li>
                                     <li></li>
                                     <li><a href="#section-contact">{isFrench ? "Contact" : "Contact"}</a></li>
                                     <li></li>
@@ -106,14 +102,10 @@ function NavBar() {
                                     </div>}
                                 </div>
                                 <div class="social-icons">
-                                <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-linkedin fa-lg" style={{ backgroundColor: `${color}` }}></i></a>
+
                                 </div>
                                 <div style={{ display: "flex", position: "relative", flexDirection: "column", position: "absolute" }}>
-                                    {edit && !hideEdit && <input type="text" style={{ width: 200, zIndex: 1, }} onChange={(text) => setFacebook(text.target.value)} placeholder={isFrench ? "Lien Facebook" : "Facebook link"} />}
-                                    {edit && !hideEdit && <input type="text" style={{ width: 200, zIndex: 1 }} onChange={(text) => setTwitter(text.target.value)} placeholder={isFrench ? "Lien Twitter" : "Twitter link"} />}
-                                    {edit && !hideEdit && <input type="text" style={{ width: 200, zIndex: 1 }} onChange={(text) => setLinkedin(text.target.value)} placeholder={isFrench ? "Lien Linkedin" : "Linkedin link"} />}
-                                    {edit && !hideEdit && <input type="text" style={{ width: 200, zIndex: 1 }} onChange={(text) => setInstagram(text.target.value)} placeholder={isFrench ? "Lien Instagram" : "Instagram link"} />}
+
 
                                 </div>
                                 <span id="menu-btn" onClick={() => setOpenNavBar(openNavBar ? false : true)}></span>

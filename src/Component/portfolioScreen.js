@@ -7,6 +7,9 @@ import ModeIcon from '@mui/icons-material/Mode';
 import { useSelector, useDispatch } from 'react-redux';
 import { setTabSectionPortfolios, setImagesPortfolio } from '../reducers/actions';
 import CustomModalItemPortfolio from './modalItemPortfolio';
+import image from './image/FauteuilBlack.jpg';
+import image2 from './image/FauteuilWhite.jpg';
+
 
 export default function PortfolioScreen() {
     const dispatch = useDispatch();
@@ -22,14 +25,9 @@ export default function PortfolioScreen() {
     if (localStorage.getItem('imagesPortfolio') != null) {
         var imagesPortfolio = JSON.parse(localStorage.getItem('imagesPortfolio'));
     } else {
-        var imagesPortfolio = [{ id: 1, name: "GreenSearcher", filter: "React-Native Node MongoDB", image: "images/portfolio/GreenSearcher.gif" , descriptif:"Application mobile React Native pour scanner des QR codes et connaître les impacts environnementaux des produits via Node.js et MongoDB."},
-            { id: 2, name: "FoodCheck", filter: "React-Native Node MongoDB", image: "images/portfolio/FoodCheck.gif" , descriptif:"Application mobile React Native permettant d'obtenir des informations sur les nutriments des produits alimentaire, avec Node.js et MongoDB."},
-            { id: 3, name: "HoomizPro", filter: "React-Native Node MongoDB", image: "images/portfolio/HoomizPro.gif" , descriptif:"Application d'aide à domicile facilitant le quotidien des auxiliaires pour pointer, visualiser leurs interventions, et gérer leurs tâches."},
-            { id: 4, name: "HoomizFamily", filter: "React-Native Node MongoDB", image: "images/portfolio/HoomizFamily.gif" , descriptif:"Application permettant aux clients de visualiser leurs factures, suivre leurs interventions, et demander de nouvelles prestations."},
-            { id: 5, name: "BackOffice Hoomiz", filter: "React MongoDB Node", image: "images/portfolio/BackOffice.gif" , descriptif:"Outil permettant aux responsables de secteur de planifier les interventions et de rechercher des auxiliaires disponibles."},
-            { id: 6, name: "TheStadium", filter: "React-Native ASPNET", image: "images/portfolio/TheStadium.gif" , descriptif:"Application pour visualiser les matchs en Grande-Bretagne, suivre les buteurs et accéder aux statistiques en temps réel"},
-            { id: 6, name: "CheckListTogether", filter: "React-Native Node MongoDB", image: "images/portfolio/CheckListTogether.gif" , descriptif:"Application collaborative pour gérer une check-list en groupe et faire évoluer des créatures en accomplissant des tâches."}
-
+        var imagesPortfolio = [
+            { id: 2, name: "Titan 2", filter: "Titan", image: image2 , descriptif:"Équipé des dernières technologies pour vous offrir un massage complet et relaxant."},
+            { id: 3, name: "Médiforme", filter: "Mediforme", image: image , descriptif:"Un massage complet, de la tête aux pieds."},
         ]
     }
     const [imagesPortfolios, setImagePortfolio] = useState(imagesPortfolio)
@@ -69,7 +67,7 @@ export default function PortfolioScreen() {
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h2 >Portfolio</h2>
+                        <h2 >Galerie</h2>
                     </div>
                    <CustomModalItemPortfolio open={openItem} onClose={() => setOpenItem(false)} item={item} />
                    <MyModal sections={tabSectionPortfolios} open={open} onClose={() => setOpen(false)} onSave={(value) => onSave(value)} /> 
@@ -95,12 +93,12 @@ export default function PortfolioScreen() {
                                         <div class="picframe wow">
                                             <span class="overlay" style={{ backgroundColor: color }}>
                                                 <span class="pf_text">
-                                                    <span class="project-name" style={{color:"#AF5010"}}>{item.name}</span>
-                                                    <span class="project-name" style={{color:"white"}}>{item.descriptif}</span>
+                                                    <span class="project-name" style={{color:"#20c997", textAlign:"center",marginTop:"-50px"}}>{item.name}</span>
+                                                    <span class="project-name" style={{color:"white", textAlign:"center"}}>{item.descriptif}</span>
                                                 </span>
                                             </span>
 
-                                            <img src={`${item.image}`} alt="" />
+                                            <img src={item.image} alt={item.name} />
                                         </div>
                                     </div>
                                 )

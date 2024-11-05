@@ -123,6 +123,19 @@ export default function ContactUs() {
                         {edit && !hideEdit && <input type="text" name="email" id="email" class="form-control" value={contactEmail} placeholder="Ton email" onChange={(e) => setFields("contactEmail", e.target.value)} />}
 
                     </div>
+                    <div className="col-md-12 text-center mt-4">
+                        <div className="wm-1"></div>
+                        <i className="icon_clock_alt id-color size40 mb20"></i>
+                        <h6 className="id-color">{isFrench ? "Horaires d'ouverture" : "Opening Hours"}</h6>
+                        <p>
+                            {isFrench ? "Haute saison (1/04 au 31/08) :" : "High season (1/04 to 31/08) :"}<br/>
+                            {isFrench ? "Du mardi au samedi de 10h00 à 13h00 et de 16h00 à 19h00" : "Tuesday to Saturday from 10:00 AM to 1:00 PM and 4:00 PM to 7:00 PM"}
+                        </p>
+                        <p>
+                            {isFrench ? "Basse saison (1/09 au 31/03) :" : "Low season (1/09 to 31/03) :"}<br/>
+                            {isFrench ? "Du mardi au vendredi de 14h00 à 18h00 et le samedi de 10h00 à 13h00 et de 14h00 à 18h00" : "Tuesday to Friday from 2:00 PM to 6:00 PM and Saturday from 10:00 AM to 1:00 PM and 2:00 PM to 6:00 PM"}
+                        </p>
+                    </div>
                     {!edit && !hideEdit && <div style={{ position: "absolute", top: -10, right: 30 }}>
                         <a href={"#modif"} class="circle-icon" style={{ backgroundColor: color }} onClick={() => setEdit(true)}><i class="fa fa-pencil fa-lg" style={{ color: "black" }}></i></a>
                     </div>}
